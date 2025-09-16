@@ -4,7 +4,7 @@
 # ‘True’ para exp = “[()]{}{()()}” e 
 # ‘False’ para exp = “[(])”.
 
-from Enunciados.stack import Stack
+from stack import Stack
 
 def is_balanced(expression):
     """
