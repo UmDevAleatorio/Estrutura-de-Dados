@@ -25,28 +25,15 @@ def particionar(arr, inicio, fim):
 
 #a) Busca Linear para encontrar o alvo ou a posição de inserção
 def busca_linear_insercao(arr, alvo):
-    """
-    Realiza uma busca linear em um array ordenado.
-    Retorna o índice se o alvo for encontrado.
-    Caso contrário, retorna o índice onde ele deveria ser inserido.
-    """
     for i in range(len(arr)):
-        #Se o elemento atual for igual ao alvo, retorna o índice
         if arr[i] == alvo:
             return i
-        #Se o elemento atual for maior que o alvo, o alvo deveria ser inserido aqui
         elif arr[i] > alvo:
             return i
-    #Se o loop terminar, o alvo deve ser inserido no final do array
     return len(arr)
 
 #b) Busca Binária para encontrar o alvo ou a posição de inserção
 def busca_binaria_insercao(arr, alvo):
-    """
-    Realiza uma busca binária em um array ordenado.
-    Retorna o índice se o alvo for encontrado.
-    Caso contrário, retorna o índice onde ele deveria ser inserido.
-    """
     inicio, fim = 0, len(arr) - 1
     while inicio <= fim:
         meio = (inicio + fim) // 2
@@ -56,7 +43,6 @@ def busca_binaria_insercao(arr, alvo):
             inicio = meio + 1
         else:
             fim = meio - 1
-    #Se o loop terminar, 'inicio' é a posição correta para inserção
     return inicio
 
 #Exemplo de Uso
